@@ -6,7 +6,7 @@ namespace Game
     {
         public static Manager Instance { get; private set; }
 
-        private int _totalPoints;
+        [SerializeField]private int _totalPoints;
         public int TotalPoints => _totalPoints;
 
         private void Awake()
