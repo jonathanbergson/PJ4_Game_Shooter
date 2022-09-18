@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using Ship.Bullet;
 
-namespace Player.Shot
+namespace Ship.Shot
 {
     public class WaveShot : IShot
     {
-        public void Shoot()
+        public void Shoot(Transform origin, BulletScriptableObject bullet)
         {
             Debug.Log("Wave Shoot");
         }

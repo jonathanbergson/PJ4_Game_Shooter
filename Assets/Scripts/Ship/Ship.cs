@@ -1,12 +1,15 @@
 using UnityEngine;
-using Player.Shot;
+using Ship.Bullet;
+using Ship.Shot;
 
-namespace Player
+namespace Ship
 {
-    public class Player : MonoBehaviour
+    public class Ship : MonoBehaviour
     {
         private const int Speed = 20;
         private IShot _shot;
+        [SerializeField] private Transform cannon;
+        [SerializeField] private BulletScriptableObject bullet;
 
         private void Awake()
         {
@@ -38,7 +41,7 @@ namespace Player
 
         private void HandleShoot()
         {
-            if (Input.GetKeyDown(KeyCode.Space)) _shot.Shoot();
+            if (Input.GetKeyDown(KeyCode.Space)) _shot.Shoot(cannon, bullet);
         }
 
         private void HandleChangeShot()
