@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance{get; private set;}
-    public int vida;
+    public int vida=10;
     public int pontos;
     //public GameObject bala;
     
