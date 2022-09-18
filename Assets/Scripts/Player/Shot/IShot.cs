@@ -1,4 +1,4 @@
-﻿namespace Shot
+﻿namespace Player.Shot
 {
     public interface IShot
     {
