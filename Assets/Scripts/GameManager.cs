@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance{ get; private set;}
     public int vida=10;
-    public int pontos;
+    public int pontos=0;
     //public GameObject bala;
 
     void Awake()
