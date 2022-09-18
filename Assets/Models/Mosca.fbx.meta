@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: 9da2f5c40dce2954c9df20b334e918cf
+guid: 9aafda8b9d591214ba6aaaa68158e8b7
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 9202887868968334545
+    second: 'Mosca|Bater_de_Asa _Mosca '
   externalObjects: {}
   materials:
     materialImportMode: 2
