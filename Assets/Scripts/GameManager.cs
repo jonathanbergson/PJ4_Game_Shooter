@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance{get; private set;}
+    public static GameManager Instance{ get; private set;}
     public int vida=10;
     public int pontos;
     //public GameObject bala;
-    
+
     void Awake()
     {
-        if (instance==null)
+        if (Instance==null)
         {
-            instance = this;
+            Instance = this;
         }
         else
         {
@@ -22,5 +20,5 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         //bala.GetComponent<GameObject>();
     }
-    public GameManager getInstance() { return instance; }
+    public GameManager getInstance() { return Instance; }
 }

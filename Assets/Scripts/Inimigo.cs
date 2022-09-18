@@ -12,7 +12,7 @@ public class Inimigo : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameManager.instance.vida-=1;
+            GameManager.Instance.vida-=1;
         }
     }
 }
