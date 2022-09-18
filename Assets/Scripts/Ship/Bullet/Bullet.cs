@@ -16,12 +16,12 @@ namespace Ship.Bullet
             bulletRigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (collision.gameObject.CompareTag(Constants.TagEnemy) == false) return;
+            if (other.gameObject.CompareTag(Constants.TagEnemy) == false) return;
 
             Destroy(gameObject);
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
             Manager.Instance.IncrementTotalPoints();
         }
     }
