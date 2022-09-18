@@ -41,14 +41,17 @@ namespace Ship
 
         private void HandleShoot()
         {
-            if (Input.GetKeyDown(KeyCode.Space)) _shot.Shoot(cannon, bullet);
+            if (Input.GetKeyDown(KeyCode.Space) == false) return;
+
+            Transform origin = _shot is WaveShot ? transform : cannon;
+            _shot.Shoot(origin, bullet);
         }
 
         private void HandleChangeShot()
         {
             if (Input.GetKeyDown(KeyCode.Alpha1)) _shot = new SingleShot();
-            else if (Input.GetKeyDown(KeyCode.Alpha2)) _shot = new WaveShot();
-            else if (Input.GetKeyDown(KeyCode.Alpha3)) _shot = new TripleShot();
+            else if (Input.GetKeyDown(KeyCode.Alpha2)) _shot = new TripleShot();
+            else if (Input.GetKeyDown(KeyCode.Alpha3)) _shot = new WaveShot();
         }
     }
 }

@@ -8,9 +8,12 @@ namespace Ship.Bullet
     {
         private void Awake()
         {
-            Rigidbody rb = GetComponent<Rigidbody>();
-            rb.useGravity = false;
-            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+            Collider bulletCollider = GetComponent<Collider>();
+            bulletCollider.isTrigger = true;
+
+            Rigidbody bulletRigidbody = GetComponent<Rigidbody>();
+            bulletRigidbody.useGravity = false;
+            bulletRigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
         }
 
         private void OnCollisionEnter(Collision collision)
