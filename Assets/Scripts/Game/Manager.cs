@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game
 {
     public class Manager : MonoBehaviour
     {
+        public Text pontuacao;
         public static Manager Instance { get; private set; }
 
         [SerializeField]private int _totalPoints;
@@ -15,10 +17,10 @@ namespace Game
             else Destroy(gameObject);
             DontDestroyOnLoad(gameObject);
         }
-
         public void IncrementTotalPoints()
         {
             _totalPoints++;
+            pontuacao.text = "" + _totalPoints;
         }
     }
 }
